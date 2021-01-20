@@ -1297,7 +1297,7 @@ year O
 ’s O
 first O
 National O
-Dengue Dengue I-DIS
+Dengue B-DIS
 Prevention O
 Week O
 will O
@@ -1316,7 +1316,7 @@ year O
 ’s O
 first O
 National O
-Dengue Dengue I-DIS
+Dengue B-DIS
 Prevention O
 Week O
 will O
@@ -1361,7 +1361,7 @@ A O
 severe O
 risk O
 of O
-dengue dengue B-DIS
+dengue B-DIS
 disease O
 being O
 spread O
@@ -1389,7 +1389,7 @@ of O
 programmes O
 to O
 eradicate O
-dengue dengue B-DIS
+dengue B-DIS
 menace O
 will O
 be O
@@ -4914,7 +4914,7 @@ sent O
 to O
 attend O
 the O
-Dengue O
+Dengue B-DIS
 Epidemic O
 Prevention O
 Control O
@@ -5003,7 +5003,7 @@ the O
 head O
 of O
 the O
-Dengue O
+Dengue B-DIS
 Research O
 Group O
 , O
@@ -8414,8 +8414,8 @@ the O
 case O
 of O
 dengue B-DIS
-haemorrhagic O
-fever O
+haemorrhagic I-DIS
+fever I-DIS
 . O
 
 Following O
@@ -8459,12 +8459,12 @@ numbers O
 of O
 children O
 with O
-Dengue O
-Fever O
+Dengue B-DIS
+Fever I-DIS
 and O
-Dengue O
-Haemorrhagic O
-fever O
+Dengue B-DIS
+Haemorrhagic I-DIS
+fever I-DIS
 . O
 
 " O
@@ -8530,9 +8530,9 @@ bleed O
 when O
 they O
 have O
-Dengue O
-Haemorrhagic O
-Fever O
+Dengue B-DIS
+Haemorrhagic I-DIS
+Fever I-DIS
 . O
 
 This O
