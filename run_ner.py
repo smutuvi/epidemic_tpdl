@@ -647,7 +647,7 @@ def main():
             if global_step:
                 result = {"{}_{}".format(global_step, k): v for k, v in result.items()}
             results.update(result)
-        output_eval_file = os.path.join(args.output_dir, "eval_results.txt")
+        output_eval_file = os.path.join(args.output_dir, args.model_name_or_path + "_eval_results.txt")
         with open(output_eval_file, "w") as writer:
             for key in sorted(results.keys()):
                 writer.write("{} = {}\n".format(key, str(results[key])))
@@ -658,12 +658,12 @@ def main():
         model.to(args.device)
         result, predictions = evaluate(args, model, tokenizer, labels, pad_token_label_id, mode="test")
         # Save results
-        output_test_results_file = os.path.join(args.output_dir, "test_results.txt")
+        output_test_results_file = os.path.join(args.output_dir, args.model_name_or_path + "_test_results.txt")
         with open(output_test_results_file, "w") as writer:
             for key in sorted(result.keys()):
                 writer.write("{} = {}\n".format(key, str(result[key])))
         # Save predictions
-        output_test_predictions_file = os.path.join(args.output_dir, "test_predictions.txt")
+        output_test_predictions_file = os.path.join(args.output_dir, args.model_name_or_path + "_test_predictions.txt")
         with open(output_test_predictions_file, "w") as writer:
             with open(os.path.join(args.data_dir, "test.txt"), "r") as f:
                 example_id = 0
