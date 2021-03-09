@@ -673,6 +673,7 @@ def main():
                         if not predictions[example_id]:
                             example_id += 1
                     elif predictions[example_id]:
+                        #output_line = line.split()[0] + " " + predictions[example_id].pop(0) + "\n"
                         output_line = line.split()[0] + " " + line.split()[1] + " " + predictions[example_id].pop(0) + "\n"
                         writer.write(output_line)
                     else:
