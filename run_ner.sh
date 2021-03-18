@@ -1,30 +1,21 @@
-task=epidemic
-MAX_LENGTH=256
-MODEL=bert-base-multilingual-cased
-OUTPUT_DIR=output_dir
-BATCH_SIZE=16
-NUM_EPOCHS=10
-SAVE_STEPS=1000
-LOGGING_STEPS=1000
-LEARNING_RATE=5e-5
-SEED=42
+export MAX_LENGTH=128
+export BERT_MODEL=xlm-roberta-large
+export OUTPUT_DIR=output_dir
+export BATCH_SIZE=16
+export NUM_EPOCHS=3
+export SAVE_STEPS=750
+export SEED=1
+
 python3 run_ner.py \
-  --data_dir=./data \
-  --model_type=bert \
-  --labels=./data/labels.txt \
-  --model_name_or_path=${MODEL} \
-  --output_dir=${OUTPUT_DIR} \
-  --max_seq_length=${MAX_LENGTH} \
-  --num_train_epochs=${NUM_EPOCHS} \
-  --per_gpu_train_batch_size=${BATCH_SIZE} \
-  --save_steps=${SAVE_STEPS} \
-  --logging_steps=${LOGGING_STEPS} \
-  --learning_rate=${LEARNING_RATE} \
-  --seed=${SEED} \
-  --task=${task} \
-  --do_train \
-  --do_eval \
-  --do_predict \
-  --overwrite_output_dir \
-  --max_grad_norm=0.5 \
-  # --do_lower_case \
+--data_dir ./data \
+--labels ./data/labels.txt \
+--model_name_or_path $BERT_MODEL \
+--output_dir $OUTPUT_DIR \
+--max_seq_length  $MAX_LENGTH \
+--num_train_epochs $NUM_EPOCHS \
+--per_gpu_train_batch_size $BATCH_SIZE \
+--save_steps $SAVE_STEPS \
+--seed $SEED \
+--do_train \
+--do_eval \
+--do_predict
