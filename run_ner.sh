@@ -1,9 +1,9 @@
 export MAX_LENGTH=128
-export BERT_MODEL=bert-base-multilingual-cased
-python3 preprocess.py train.txt.tmp $BERT_MODEL $MAX_LENGTH > data/train.txt
-python3 preprocess.py dev.txt.tmp $BERT_MODEL $MAX_LENGTH > data/dev.txt
-python3 preprocess.py test.txt.tmp $BERT_MODEL $MAX_LENGTH > data/test.txt
-#cat train.txt dev.txt test.txt | cut -d " " -f 2 | grep -v "^$"| sort | uniq > data/labels.txt
+export BERT_MODEL=bert-base-cased
+# python3 preprocess.py train.txt.tmp $BERT_MODEL $MAX_LENGTH > data/train.txt
+# python3 preprocess.py dev.txt.tmp $BERT_MODEL $MAX_LENGTH > data/dev.txt
+# python3 preprocess.py test.txt.tmp $BERT_MODEL $MAX_LENGTH > data/test.txt
+# #cat train.txt dev.txt test.txt | cut -d " " -f 2 | grep -v "^$"| sort | uniq > data/labels.txt
 export OUTPUT_DIR=output_dir
 export BATCH_SIZE=32
 export NUM_EPOCHS=1
