@@ -6,7 +6,7 @@ python3 preprocess.py test.txt.tmp $BERT_MODEL $MAX_LENGTH > data/test.txt
 #cat train.txt dev.txt test.txt | cut -d " " -f 2 | grep -v "^$"| sort | uniq > data/labels.txt
 export OUTPUT_DIR=output_dir
 export BATCH_SIZE=32
-export NUM_EPOCHS=3
+export NUM_EPOCHS=1
 export SAVE_STEPS=750
 export SEED=1
 
